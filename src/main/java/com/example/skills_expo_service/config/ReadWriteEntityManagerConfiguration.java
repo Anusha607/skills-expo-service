@@ -42,7 +42,7 @@ public class ReadWriteEntityManagerConfiguration {
 
     @Bean
     @Primary
-    public LocalContainerEntityManagerFactoryBean readwriteEntityManagerFactory(EntityManagerFactoryBuilder builder, @Qualifier("readWriteDatasource") DataSource datasource){
+    public LocalContainerEntityManagerFactoryBean readWriteEntityManagerFactory(EntityManagerFactoryBuilder builder, @Qualifier("readWriteDatasource") DataSource datasource){
         return builder.dataSource(datasource).packages("com.example.skills_expo_service").persistenceUnit("main").build();
     }
 }
